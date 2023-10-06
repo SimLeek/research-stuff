@@ -80,7 +80,9 @@ def update_image(arr, sparse_vectors, i, g_active_ind):
 
         if ch_1 in sparse_vectors[k][0][0:g_active_ind]:
             index = sparse_vectors[k][0].index(ch_1)
-            arr[k // arr.shape[0]][k % arr.shape[1]] = sparse_vectors[k][1][index] * i_mod
+            arr[k // arr.shape[0]][k % arr.shape[1]] = (
+                sparse_vectors[k][1][index] * i_mod
+            )
 
         if ch_2 in sparse_vectors[k][0][0:g_active_ind]:
             index = sparse_vectors[k][0].index(ch_2)
